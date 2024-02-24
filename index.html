@@ -1,0 +1,848 @@
+<html>
+
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=DM+Serif+Display&family=Kdam+Thmor+Pro&family=Pacifico&family=Playball&family=Protest+Riot&family=Roboto:ital,wght@0,100;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Resort</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Kdam+Thmor+Pro&family=Pacifico&family=Playball&family=Roboto:ital,wght@0,100;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script> window.onload = function () {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+    }</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav class=" navbar fixed-top navbar-expand-lg navbar-light" style="background-color: rgba(204, 238, 238, 0.9); height:70px">
+    <div class=" container-fluid ">
+      <img src="images/resort logo.webp" alt="nav-logo" width="100" height="70"
+        class="d-inline-block align-text-top rounded-circle  ">
+      <div class="border-end">
+        <h2 class="navbar-brand mt-2 mx-2 nav-title" style="color:rgb(101, 67, 133); font-weight: 800;" href="#">Hotel
+          Resort
+        </h2>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="background-color: rgba(204, 238, 238, 0.9);">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold mx-2 mx-lg-0 ms-0" aria-current="page" href="#"
+              style="color:rgb(101, 67, 133);">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold mx-sm-2 mx-lg-0" href="#" style="color:rgb(101, 67, 133);">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle fw-bold rounded me-lg-0 nav-rooms text-center" href="#" id="navbarDropdown"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              style="color:rgb(101, 67, 133); border:2px solid rgb(101, 67, 133); width:85px">
+              Rooms
+            </a>
+
+            <ul class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Luxury Room</a></li>
+              <li><a class="dropdown-item" href="#">Cozy Room</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Family Room</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold mx-sm-2 mx-lg-0" href="#" tabindex="-1" aria-disabled="true"
+              style="color:rgb(101, 67, 133);">About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 mt-1 border border-info border-2" type="search" placeholder="Search a room"
+            aria-label="Search">
+          <button class="btn btn-info text-light mx-2 mt-1" type="submit"
+            style=" background: -webkit-linear-gradient(aqua,violet);">Search</button>
+          <button type="button" class="btn btn-info text-light mt-1" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop" style=" background: -webkit-linear-gradient(aqua,violet);">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-info" id="staticBackdropLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label fs-6 fw-bold text-info"
+            style="text-shadow: 1px 1px 2px violet;">Email address</label>
+          <input type="email" class="form-control  border border-info border-2" id="exampleFormControlInput1"
+            placeholder="name@gmail.com">
+          <p class="text-muted fs-6">We'll never share your email with anyone els.e</p>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label fs-6 fw-bold text-info"
+            style="text-shadow: 1px 1px 2px violet;">Password</label>
+          <input type="password" class="form-control border border-info border-2"
+            id="exampleFormControlInput1" placeholder="******">
+          <div class="form-check form-switch  mt-3">
+            <input class="form-check-input bg-info" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label " for="flexSwitchCheckDefault"
+              style="color:rgb(90, 45, 131); font-weight: 500; ">Remember me</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info ms-0 ">Login</button>
+        <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid position-relative" style="height:87vh">
+
+    <div class="flex-column position-absolute position-fixed mt-5 end-0" style="z-index:30;">
+
+      <div class="col-12 mt-5 me-4 ">
+        <a href="#"><i class="fab fa-facebook-square mt-5 aside-icon"></i></a>
+      </div>
+
+      <div class="col-12 mt-3">
+        <a href="#"><i class="fab fa-whatsapp-square aside-icon"></i></a>
+      </div>
+
+      <div class="col-12 mt-3">
+        <a href="#"><i class="fab fa-twitter-square aside-icon"></i></a>
+      </div>
+
+      <div class="col-12 mt-3">
+        <a href="#"><i class="fab fa-linkedin aside-icon"></i></a>
+      </div>
+
+      <div class="col-12 mt-3">
+        <a href="#"><i class="fab fa-instagram-square aside-icon"></i></a>
+      </div>
+    </div><!-- /flex-column -->
+
+    <div id="carouselExampleIndicators" class="carousel slide w-100 mt-5  " data-bs-ride="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide w-100" data-bs-ride="carousel">
+        <div class="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner w-100">
+          <div class="carousel-item active">
+            <img src="images/Slideshow photo1.jpg" class="d-block w-100 h-100" alt="slideshow-img1">
+            <div class="carousel-caption d-md-block " style="background-color: rgb(146, 174, 174,0.5);">
+              <h5 class="fs-2 text-info" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+                Swimming Pool</h5>
+              <p class="fw-bold fs-25 ">You will have the most relaxing time.</p>
+              <button class="btn btn-info text-light fw-bold">Book Now!</button>
+            </div>
+          </div>
+          <div class="carousel-item h-100 w-100">
+            <img src="images/slideshow img2.jpg" class="d-block w-100 h-100" alt="slidehsow-img2">
+            <div class="carousel-caption  d-md-block" style="background-color: rgb(146, 174, 174,0.7);">
+              <h5 class="fs-2 text-info" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+                Best Room Service</h5>
+              <p class="fw-bold fs-25 ">Best room with the best view.</p>
+              <button class="btn btn-info text-light fw-bold">Book Now!</button>
+            </div>
+          </div>
+          <div class="carousel-item h-100 w-100">
+            <img src="images/slideshow img3.jpg" class="d-block w-100 h-100" alt="slidehsow-img3">
+            <div class="carousel-caption  d-md-block" style="background-color: rgb(146, 174, 174,0.6);">
+              <h5 class="fs-2 text-info" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+                Our Beach</h5>
+              <p class="fw-bold fs-25 ">We are the best choice for your vacation!</p>
+              <button class="btn btn-info text-light fw-bold">Book Now!</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container-fluid p-2 text-center"
+      style="background: linear-gradient(rgb(50, 166, 166),rgb(62, 12, 62));">
+      <h4 class="fw-bold text-info"
+        style="color:rgb(89, 26, 89); font-family:Georgia, 'Times New Roman', Times, serif; text-shadow:2px 1px 3px rgb(146, 50, 146)">
+        Welcome To Our Resort!</h4>
+      <div class="row justify-content-evenly">
+        <div class="col-lg-2 col-sm-12">
+          <label class="form-label text-info fw-bold">Select Room Type</label>
+          <select class="form-select" aria-label="Default select example">
+            <option hidden>Room Type</option>
+            <option value="1">Luxury</option>
+            <option value="2">Cozy</option>
+            <option value="3">Family</option>
+          </select>
+        </div>
+
+        <div class="col-lg-2 col-sm-12">
+          <label class="form-label  text-info fw-bold">Check-In Date</label>
+          <input class=" form-select" type="date">
+        </div>
+
+        <div class="col-lg-2 col-sm-12">
+          <label class="form-label  text-info fw-bold">Check-Out Date</label>
+          <input class=" form-select" type="date">
+        </div>
+
+        <div class="col-lg-2 col-sm-12">
+          <label class="form-label  text-info fw-bold">Guests</label>
+          <input placeholder="Guests" class=" form-select" type="number" step="1" max="20" min="1">
+        </div>
+
+        <div class="col-lg-2 col-sm-12">
+          <button class=" btn btn-outline-info border border-info fw-bold " style="margin-top: 32px; width:200px">Check
+            Availability</button>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+
+    <div class="jumbotron jumbotron-fluid text-center pt-2">
+      <div class="container-fluid jumbotron-bg p-4 ">
+        <h3 class="display-6 text-info fw-bold"
+          style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(36, 190, 190);">Room
+          Details</h3>
+      </div>
+    </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item " style="background-color:rgb(149, 176, 233);">
+        <h2 class="accordion-header " id="flush-headingOne">
+          <button class="accordion-button collapsed fw-bold bg-info text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Luxury Room
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Bed & Breakfast
+            Home Made Food
+            Tour Guide
+            Safety & security
+            Local Heritage</div>
+          <h5 class="ms-3 d-inline">99$ per night</h5>
+          <button class="btn btn-info text-light mb-1" style="height:35px">Reserve</button>
+        </div>
+      </div>
+      <div class="accordion-item" style="background-color:rgb(149, 176, 233);">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed fw-bold bg-info text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Cozy Room
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Bed & Breakfast
+            Home Made Food
+            Tour Guide
+            Safety & security
+            Local Heritage</div>
+          <h5 class="ms-3 d-inline">75$ per night</h5>
+          <button class="btn btn-info text-light mb-1" style="height:35px">Reserve</button>
+        </div>
+      </div>
+      <div class="accordion-item" style="background-color:rgb(149, 176, 233);">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed fw-bold bg-info text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Family Room
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Bed & Breakfast
+            Home Made Food
+            Tour Guide
+            Safety & security
+            Local Heritage</div>
+          <h5 class="ms-3 d-inline">100$ per night</h5>
+          <button class="btn btn-info text-light mb-1" style="height:35px">Reserve</button>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="jumbotron jumbotron-fluid text-center pt-2">
+      <div class="container-fluid jumbotron-bg pt-4">
+        <h3 class="display-6 text-info"
+          style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(36, 190, 190);">Top
+          Destinations</h3>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row justify-content-evenly">
+
+        <div class="col-sm-12 col-lg-3 card position-relative overflow-hidden top-card mt-3" style="width: 18rem;">
+          <img src="images/Spa.jpeg" class="card-img-top" alt="spa-img" height="170">
+          <div class="card-body">
+            <h5 class="card-title exp-title text-info">Spa</h5>
+            <p class="card-text text-light fw-bold">2 Day 3 night, Start from $500</p>
+            <button type="button" class="btn btn-info text-light fw-bold" data-bs-toggle="tooltip"
+              data-bs-placement="right" title=" More Details" style="margin-top: 10px;">
+              Interested
+            </button>
+          </div>
+        </div>
+
+        <div class=" col-sm-12 col-lg-3 card position-relative overflow-hidden top-card mt-3" style="width: 18rem;">
+          <img src="images/slideshow img1.jpg" class="card-img-top" alt="pool-img" height="170">
+          <div class="card-body">
+            <h5 class="card-title exp-title text-info">Pool</h5>
+            <p class="card-text text-light fw-bold">2 Day 3 night, Start from $500</p>
+            <button type="button" class="btn btn-info text-light fw-bold" data-bs-toggle="tooltip"
+              data-bs-placement="right" title=" More Details" style="margin-top: 10px;">
+              Interested
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-3 card position-relative overflow-hidden top-card mt-3" style="width: 18rem;">
+          <img src="images/slideshow img3.jpg" class="card-img-top" alt="Beach-img" height="170">
+          <div class="card-body">
+            <h5 class="card-title exp-title text-info">Beach</h5>
+            <p class="card-text text-light fw-bold">2 Day 3 night, Start from $500</p>
+            <button type="button" class="btn btn-info text-light fw-bold" data-bs-toggle="tooltip"
+              data-bs-placement="right" title=" More Details" style="margin-top:10px;">
+              Interested
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="jumbotron jumbotron-fluid text-center pt-2">
+      <div class="container-fluid jumbotron-bg pt-4">
+        <h3 class="display-6 text-info"
+          style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(36, 190, 190);">ONE
+          OF A KIND EXPERIENCES
+        </h3>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row justify-content-evenly">
+
+        <div class="col-sm-12 col-lg-3 card position-relative overflow-hidden top-card mt-3" style="width: 18rem;">
+          <img src="images/Private dinner.jpg" class="card-img-top" alt="dinner-img" height="200">
+          <div class="card-body">
+            <h5 class="card-title exp-title text-info">Private Dinner</h5>
+            <p class="card-text fs-6 fw-bold text-light">Planning a wedding proposal, or an anniversary? impress your
+              other half and celebrate together here, you both will have the best experience ever</p>
+            <button type="button" class="btn btn-info text-light fw-bold" data-bs-toggle="tooltip"
+              data-bs-placement="right" title=" More Details">
+              Book a Table
+            </button>
+          </div>
+        </div>
+
+        <div class=" col-sm-12 col-lg-3 card position-relative overflow-hidden top-card mt-3" style="width: 18rem;">
+          <img src="images/Wedding-img.jpg" class="card-img-top" alt="wedding-img" height="200">
+          <div class="card-body">
+            <h5 class="card-title exp-title text-info">Wedding</h5>
+            <p class="card-text text-light fw-bold">Email us at <a href="# "
+                class="card-text text-info fw-bold">resort@gmail.com </a> and allow us to make your celebration of love
+              infintely delightful, unforgettable</p>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-3 card position-relative overflow-hidden top-card mt-3" style="width: 18rem;">
+          <img src="images/Yoga-img.jpg" class="card-img-top" alt="yoga-img" height="200">
+          <div class="card-body">
+            <h5 class="card-title exp-title text-info">Beach</h5>
+            <p class="card-text text-light fw-bold">Yoga is important in daily life because it provides a holistic
+              practice that takes care of body, mind, and soul. And enable us to make better lifestyle choices. Yoga is,
+              therefore, a way of life, so we offered a proffesional coach for you and for free.</p>
+            <button type="button" class="btn btn-info text-light fw-bold" data-bs-toggle="tooltip"
+              data-bs-placement="right" title=" More Details">
+              Schedule
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <hr>
+
+    <div class="jumbotron jumbotron-fluid text-center pt-2">
+      <div class="container-fluid jumbotron-bg pt-4">
+        <h3 class="display-6 text-info"
+          style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(36, 190, 190);">
+          Translate From English To Arabic
+        </h3>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-info text-light p-3">
+      <span class="fs-5 fw-bold">Write and Translate</span> <a href="#" class="f-5 fw-bold"
+        style="text-decoration: none; color:rgb(53, 6, 100)">Press Here</a>
+      <button type="button" class="btn btn-secondary d-block mt-2 text-info" data-bs-container="body"
+        data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Copied">
+        Copy
+      </button>
+
+      <div class="form-floating mt-2">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+          style="height: 120px; resize: none;"></textarea>
+        <label for="floatingTextarea2" class="text-secondary text-muted">translate</label>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid fixed-img position-relative p-0">
+      <div class=" position-absolute w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container-fluid jumbotron-bg pt-4">
+        <h3 class="display-6 text-info"
+          style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(36, 190, 190);">
+          Facilities
+        </h3>
+      </div>
+    </div>
+
+    <div class="container ">
+      <div class="row mt-3 justify-content-evenly w-100">
+        <div class="card  position-relative card-after mt-3" style="width: 18rem;">
+          <img src="images/slideshow img1.jpg" class="card-img-top" alt="pool" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Swimming Pool</h5>
+            <a href="#" class="btn btn-info text-light">Know More</a>
+            <p class="card-text text-info">Some quick example text to build on the c</p>
+          </div>
+        </div>
+
+        <div class="card position-relative  card-after mt-3" style="width: 18rem;">
+          <img src="images/Golf and Garden.jpg" class="card-img-top" alt="Golf and Garden" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Golf&Garden</h5>
+            <a href="#" class="btn btn-info text-light" style="margin-left:18px;">Know More</a>
+            <p class="card-text text-info">It's the perfect place for you to be relaxed</p>
+          </div>
+        </div>
+
+        <div class="card position-relative card-after mt-3" style="width: 18rem;">
+          <img src="images/spa and beauty.jpg" class="card-img-top" alt="Spa & Beauty" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Spa & Beauty</h5>
+            <a href="#" class="btn btn-info text-light" style="margin-left: 17px;">Know More</a>
+            <p class="card-text text-info">Best food experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row mt-3 justify-content-evenly w-100">
+        <div class="card  position-relative card-after mt-auto" style="width: 18rem;">
+          <img src="images/our resturant.jpg" class="card-img-top" alt="Resturant" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info ">Our Resturant</h5>
+            <a href="#" class="btn btn-info text-light " style="margin-left: 13px;">Know More</a>
+            <p class="card-text  text-info">Some quick example text to build on the c</p>
+          </div>
+        </div>
+
+        <div class="card position-relative  card-after mt-3" style="width: 18rem;">
+          <img src="images/Gym.jpg" class="card-img-top" alt="Gym" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Our Gym</h5>
+            <a href="#" class="btn btn-info text-light" style="margin-left: 35px;">Know More</a>
+            <p class="card-text  text-info">Some quick example text to build on the c</p>
+          </div>
+        </div>
+
+        <div class="card position-relative card-after mt-3" style="width: 18rem;">
+          <img src="images/c61fe8d1d08a3e0f0a5517272a9e98d7.jpg" class="card-img-top" alt="Beach" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Our Beach</h5>
+            <a href="#" class="btn btn-info text-light" style="margin-left:40px;">Know More</a>
+            <p class="card-text  text-info">Some quick example text to build on the c</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-3 justify-content-evenly w-100">
+        <div class="card  position-relative card-after  mt-lg-3 col-lg-3 " style="width: 18rem;">
+          <img src="images/6.png" class="card-img-top" alt="Our Parking" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Our Parking</h5>
+            <a href="#" class="btn btn-info text-light" style="margin-left:20px;">Know More</a>
+            <p class="card-text  text-info">Some quick example text to build on the c</p>
+          </div>
+        </div>
+
+        <div class="card position-relative card-after mt-3 col-lg-3" style="width: 18rem;">
+          <img src="images/a5d5b5a807834637b44734f77939061b.jpg" class="card-img-top" alt="Pet Place" height="350">
+          <div class="card-body">
+            <h5 class="card-title d-inline fs-6 fw-bold text-info">Pet Place</h5>
+            <a href="#" class="btn btn-info text-light" style="margin-left:50px;">Know More</a>
+            <p class="card-text text-info">Some quick example text to build on the c</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid fixed-img2 position-relative p-0">
+      <div class=" position-absolute w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
+    </div>
+    <hr>
+
+    <div class="jumbotron jumbotron-fluid text-center pt-2">
+      <div class="container-fluid jumbotron-bg pt-4">
+        <h3 class="display-6 text-info"
+          style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(36, 190, 190);">
+          Thanks For
+        </h3>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+
+      <div class="row justify-content-evenly gy-sm-5">
+
+        <div class="card col-lg-3 col-sm-3 bg-dark text-white p-0 thanks-card mt-4 ">
+
+          <img src="images/d09b2f21533dbd97f93839d76f2f09dd.jpg" class="card-img" alt="UI/UX-designer" height="320">
+
+          <div class="card-img-overlay">
+            <h5 class="card-title">All thanks and appreciation</h5>
+            <p class="card-text"><i class="far fa-clock"></i> February 6,2024</p>
+            <img src="images/d09b2f21533dbd97f93839d76f2f09dd.jpg" class=" rounded-circle ms-3 mt-5"
+              alt="UI/UX-designer" height="120" width="100">
+            <h5 class="card-text ms-3">Eng.Rose</h5>
+            <p class="card-text ms-3"> Director of UI/UX</p>
+          </div>
+
+        </div>
+
+        <div class="card col-lg-3 col-sm-3  bg-dark text-white p-0 thanks-card mt-4">
+          <img src="images/038dd9e19b69ede15ebc633ff3f975a2.jpg" class="card-img" alt="Front-end developer"
+            height="320">
+          <div class="card-img-overlay">
+            <h5 class="card-title">All thanks and appreciation</h5>
+            <p class="card-text"><i class="far fa-clock"></i> February 6,2024</p>
+            <img src="images/038dd9e19b69ede15ebc633ff3f975a2.jpg" class=" rounded-circle ms-3 mt-5"
+              alt="Front-end developer" height="120" width="100">
+            <h5 class="card-text">Eng.Jennie</h5>
+            <p class="card-text">Front-end developer</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-3 col-sm-3 bg-dark text-white p-0 thanks-card mt-4">
+          <img src="images/350acece2552b57480675b873e3460b8.jpg" class="card-img" alt="Back-end developer" height="320">
+          <div class="card-img-overlay  hover-overlay ">
+            <h5 class="card-title">All thanks and appreciation</h5>
+            <p class="card-text"><i class="far fa-clock"></i> February 6,2024</p>
+            <img src="images/350acece2552b57480675b873e3460b8.jpg" class=" rounded-circle ms-3 mt-5"
+              alt="Back-end developer" height="120" width="100">
+            <h5 class="card-text">Eng.Lisa</h5>
+            <p class="card-text">Back-end developer</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <hr class="mt-5">
+
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container-fluid">
+        <h3 class="display-6 fw-bold jumborton-h3">Our News
+        </h3>
+      </div>
+    </div>
+
+    <div class="container p-5 position-relative news-progress overflow-hidden">
+
+      <div class="img col-sm-12 col-lg-5 position-absolute end-0 top-0 d-sm-block">
+
+        <img src="images/Boat.jpg" class="rounded h-100 w-100" alt="Boat">
+
+      </div><!-- /img -->
+
+      <div class="news-info col-sm-12 col-lg-6">
+        <h4 class="text-start mt-5 d-inline" style="color:rgb(105, 27, 177)">Our Secret Island Boat Tour Is just for
+          You</h4>
+        <p class="fw-bold" style="font-size: 15px; color:rgb(105, 27, 177)"><i class="fas fa-calendar-alt mt-3"></i>Mon,
+          May, 25th 2020</p>
+        <div class="progress ">
+          <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h5 class="mt-3 fw-bold" style="color:rgb(105, 27, 177)">Let’s ride with us to the secret island! Our boat ride
+          package include:</h5>
+
+
+        <ul class="mt-3">
+          <li class="fs-5 news-li">round-trip to the secret island</li>
+          <li class="fs-5 news-li">Island chic accommodations only steps from the beach and the bay</li>
+          <li class="fs-5 news-li">Complimentary hot breakfast and evening wine & cheese reception</li>
+          <li class="fs-5 news-li">Access to beautiful nature lakes and forests</li>
+          <li class="fs-5 news-li">Bell service and dockside luggage service</li>
+        </ul>
+      </div><!-- /news-info -->
+
+    </div>
+
+
+    <div class="container mt-4 p-5 position-relative news-progress overflow-hidden">
+
+
+      <div class="img2 position-absolute start-0 top-0 d-sm-block">
+        <img src="images/beach.jpg" class="rounded float-left h-100 w-100" alt="beach">
+      </div><!-- /img2 -->
+
+
+      <div class="news-info">
+        <h4 class="news-h4 mt-5 d-inline" style="color:rgb(105, 27, 177);">Celebrate Your Birthday
+          with
+          the Beach Tent Dining!</h4>
+        <p class="fw-bold news-p" style="font-size: 15px; color:rgb(105, 27, 177);"><i
+            class="fas fa-calendar-alt calendar mt-3 "></i>Mon, May, 25th 2020</p>
+        <div class="progress progg">
+          <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class=" mt-3 news-p2 fw-bold " style=" color:rgb(105, 27, 177);">A special offer for those
+          who want to celebrate a birthday at the beach at Oceanica – if you love the sound of the ocean and the live
+          music, dining outdoors, and the most memorable moments – get a chance to have a tent dining outdoors! If it’s
+          your birthday, you’ll get the the package halfly discounted!</p>
+        <p class=" mt-3 news-p2 fw-bold text-end" style=" color:rgb(105, 27, 177);">Step onto the sandy shore
+          of the Atlantic ocean for a traditional tend dining. You’ll get a bit of Egyptian dining experience – Though
+          Beduins traditionally dwell in deserts, their culture inspired this seaside dining experience, which features
+          authentic Egyptian cuisine and entertainment.</p>
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="container mt-4 p-5 position-relative news-progress overflow-hidden">
+
+      <div class="img col-sm-12 col-lg-5 position-absolute end-0 top-0 d-sm-block">
+
+        <img src="images/dinner.jpg" class="rounded h-100 w-100" alt="dinner">
+
+      </div><!-- /img -->
+
+
+      <div class="news-info">
+        <h4 class="text-start mt-5 d-inline" style="color:rgb(105, 27, 177)">Get a Fresh Spa and Breakfast Package
+        </h4>
+        <p class="fw-bold" style="font-size: 15px; color:rgb(105, 27, 177)"><i
+            class="fas fa-calendar-alt mt-3 "></i>Mon, May, 25th 2020</p>
+        <div class="progress ">
+          <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class=" news-p3 mt-3 fw-bold text-start " style=" color:rgb(105, 27, 177);">Get a package at the
+          discounted price, and have it whatever you want – on a private island, or at home. Lunch and dinner are
+          complemented by ocean views at Bleu, a modern Mediterranean brasserie at our hotel Oceanica. Overlooking the
+          Atlantic coastline and the grand beautiful lighthouse – the restaurant celebrates local seafood with a menu of
+          fresh fish handpicked daily by Executive Chef Thierry Papillier, who visits the seaside fish markets himself.
+        </p>
+      </div><!-- /news-info -->
+
+    </div>
+
+
+    <div class="container mt-4 p-5 position-relative news-progress overflow-hidden ">
+
+
+      <div class="img2 position-absolute start-0 top-0 d-sm-block">
+        <img src="images/beach.jpg" class="rounded float-left h-100 w-100" alt="beach">
+      </div><!-- /img2 -->
+
+
+      <div class="news-info ">
+        <h4 class="news-h4 mt-5 d-inline" style="color:rgb(105, 27, 177);">Celebrate Your Birthday
+          with
+          the Beach Tent Dining!</h4>
+        <p class="fw-bold news-p" style="font-size: 15px; color:rgb(105, 27, 177);"><i
+            class="fas fa-calendar-alt calendar mt-3 "></i>Mon, May, 25th 2020</p>
+        <div class="progress progg">
+          <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <p class=" mt-3 news-p2 fw-bold" style=" color:rgb(105, 27, 177);">A special offer for those who want
+          to celebrate a birthday at the beach at Oceanica – if you love the sound of the ocean and the live music,
+          dining outdoors, and the most memorable moments – get a chance to have a tent dining outdoors! If it’s your
+          birthday, you’ll get the the package halfly discounted!Step onto the sandy shore of the Atlantic ocean for a
+          traditional tend dining. You’ll get a bit of Egyptian dining experience – ThoughBeduins traditionally dwell in
+          deserts, their culture inspired this seaside dining experience, which features authentic Egyptian cuisine and
+          entertainment.</p>
+      </div>
+
+    </div>
+
+
+    <div class=" mt-4 jumbotron jumbotron-fluid text-center">
+      <div class="container-fluid">
+        <h3 class="display-6 fw-bold jumborton-h3">JOIN US
+        </h3>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="row justify-content-evenly text-center">
+
+        <div class="card col-lg-3 join-card rounded mt-4" style="width:18rem;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-info">Subscribe Now</h5>
+            <div class="join-img">
+              <img src="images/twitter.png" class="m-auto" height="100" alt="twitter">
+            </div><!-- /join-img -->
+            <a href="#" class="text-info fw-bold text-decoration-none">Go to link</a>
+          </div>
+        </div>
+
+        <div class="card col-lg-3 join-card rounded mt-4" style="width:18rem;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-info">Contact Us</h5>
+            <div class="join-img">
+              <img src="images/wp.png" class="m-auto" height="100" alt="wp">
+            </div><!-- /join-img -->
+            <a href="#" class="text-info fw-bold text-decoration-none">Go to link</a>
+          </div>
+        </div>
+
+
+        <div class="card col-lg-3 join-card rounded mt-4" style="width:18rem;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-info">Like the Page</h5>
+            <div class="join-img">
+              <img src="images/linkedin2.png" class="m-auto" height="100" alt="linkedin">
+            </div><!-- /join-img -->
+            <a href="#" class="text-info fw-bold text-decoration-none">Go to link</a>
+          </div>
+        </div>
+
+        <div class="card col-lg-3 join-card rounded mt-4" style="width:18rem;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-info">Follow</h5>
+            <div class="join-img">
+              <img src="images/ig.png" class="m-auto" height="100" alg="ig">
+            </div><!-- /join-img -->
+            <a href="#" class="text-info fw-bold text-decoration-none">Go to link</a>
+          </div>
+        </div>
+
+        <div class="container-fluid mt-3 bg-info footer p-3">
+          <div class="row w-100">
+            <div class="col-lg-4 col-sm-12">
+              <div class="footer-title border-top border-bottom  p-2 ">
+                <img src="images/resort logo.webp" style="height:70px; width:100pxl; border-radius: 50%;" class="logo"
+                  alt="logo">
+                <h4 class="d-inline text-light ms-2">Good Company</h4>
+              </div><!-- /footer-title -->
+              <div class="footer-content p-2">
+                <p class="text-light">Tel:000-000-000</p>
+                <p class="text-light">Address: EGYPT</p>
+                <p class="text-light">Fax:000-000-000</p>
+              </div><!-- /footer-content -->
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div class="footer-title border-top border-bottom  p-2 ">
+                <img src="images/resort logo.webp" style="height:70px; width:100pxl; border-radius: 50%;" class="logo"
+                  alt="logo">
+                <h4 class="d-inline text-light ms-2">Important Links</h4>
+              </div><!-- /footer-title -->
+              <div class="footer-content p-2">
+                <p><a href="#" class="text-dark text-decoration-none">Visit Us</a></p>
+                <p><a href="#" class="text-dark text-decoration-none">Take a look</a></p>
+                <p><a href="#" class="text-dark text-decoration-none">Your health is more important</a></p>
+              </div><!-- /footer-content -->
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div class="footer-title border-top border-bottom  p-2 ">
+                <img src="images/resort logo.webp" style="height:70px; width:100pxl; border-radius: 50%;" class="logo"
+                  alt="logo">
+                <h4 class="d-inline text-light me-4">Vision</h4>
+              </div><!-- /footer-title -->
+              <div class="footer-content p-2">
+                <p class="text-light">Services for all</p>
+                <p class="text-light">Provide best services</p>
+                <p class="text-light">You will be better than before</p>
+              </div><!-- /footer-content -->
+            </div>
+          </div>
+          <div class="col-12 border-top border-bottom p-3 ">
+            <p class="footer-c">COPYRIGHT &copy; 2024 Hafsa Tarek Hikal</p>
+          </div>
+        </div><!-- /footer -->
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
